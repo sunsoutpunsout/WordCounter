@@ -1,0 +1,15 @@
+﻿@model WordCounterSite.Models.WordCountViewModel
+@{
+    ViewData["Title"] = "Word Counter";
+}
+<div>
+    <form asp-action="WordCount">
+        <div class="form-group">
+            <label class="control-label">Enter a list of words to get a unique word count.</label>
+            <input class="form-control" asp-for="Words"/>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit" class="btn btn-primary" />
+        </div>
+    </form>
+</div>

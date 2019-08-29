@@ -1,0 +1,29 @@
+﻿@model WordCountViewModel
+@{
+    ViewData["Title"] = "Word Counts";
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Count) : @Html.DisplayFor(model => model.Count)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UniqueCount) : @Html.DisplayFor(model => model.UniqueCount)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.UniqueList)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Word)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Count)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
